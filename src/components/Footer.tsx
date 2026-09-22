@@ -1,30 +1,30 @@
 import React from 'react';
-import { MapPin, Phone, Clock, UtensilsCrossed, ShieldCheck } from 'lucide-react';
+import { MapPin, Phone, Clock, ShieldCheck } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/restaurantData';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#1C201E] text-[#D4CDC3] border-t border-[#2C322E]">
+    <footer className="bg-[#231E1B] text-[#D8D2C8] border-t border-[#38302A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           
           {/* Column 1: Identity & Description */}
           <div className="flex flex-col space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-xl bg-[#C2410C] text-white flex flex-col items-center justify-center font-bold shadow-xs">
+              <div className="w-10 h-10 rounded-xl bg-[#BF432F] text-white flex flex-col items-center justify-center font-bold shadow-xs">
                 <span className="text-[10px] tracking-widest uppercase">الحمد</span>
               </div>
               <div>
                 <h3 className="text-lg font-bold font-display text-white tracking-tight leading-tight">
                   AL-HAMD RESTAURANT
                 </h3>
-                <span className="text-[11px] text-[#A6AEA8] uppercase tracking-wider block">
+                <span className="text-[11px] text-[#A69C91] uppercase tracking-wider block">
                   & Bar B.Q. • Larkana
                 </span>
               </div>
             </div>
 
-            <p className="text-xs text-[#A6AEA8] leading-relaxed">
+            <p className="text-xs text-[#B5ABA0] leading-relaxed">
               Authentic Pakistani dining specializing in freshly prepared chicken karahi woks, charcoal Bar B.Q., creamy shahi daal, and traditional dishes in Larkana, Sindh.
             </p>
 
@@ -39,27 +39,27 @@ export const Footer: React.FC = () => {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
               Quick Navigation
             </h4>
-            <ul className="space-y-2.5 text-xs text-[#A6AEA8]">
+            <ul className="space-y-2.5 text-xs text-[#B5ABA0]">
               <li>
-                <a href="#home" className="hover:text-[#E87A5D] transition-colors">Home</a>
+                <a href="#home" className="hover:text-[#E8927C] transition-colors">Home</a>
               </li>
               <li>
-                <a href="#specialties" className="hover:text-[#E87A5D] transition-colors">Specialties</a>
+                <a href="#specialties" className="hover:text-[#E8927C] transition-colors">Specialties</a>
               </li>
               <li>
-                <a href="#menu" className="hover:text-[#E87A5D] transition-colors">Full Food Menu</a>
+                <a href="#menu" className="hover:text-[#E8927C] transition-colors">Full Food Menu</a>
               </li>
               <li>
-                <a href="#about" className="hover:text-[#E87A5D] transition-colors">About Restaurant</a>
+                <a href="#about" className="hover:text-[#E8927C] transition-colors">About Restaurant</a>
               </li>
               <li>
-                <a href="#gallery" className="hover:text-[#E87A5D] transition-colors">Photo Gallery</a>
+                <a href="#gallery" className="hover:text-[#E8927C] transition-colors">Photo Gallery</a>
               </li>
               <li>
-                <a href="#reviews" className="hover:text-[#E87A5D] transition-colors">Customer Reviews</a>
+                <a href="#reviews" className="hover:text-[#E8927C] transition-colors">Customer Reviews</a>
               </li>
               <li>
-                <a href="#location" className="hover:text-[#E87A5D] transition-colors">Location & Hours</a>
+                <a href="#location" className="hover:text-[#E8927C] transition-colors">Location & Hours</a>
               </li>
             </ul>
           </div>
@@ -69,7 +69,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
               Confirmed Specialties
             </h4>
-            <ul className="space-y-2.5 text-xs text-[#A6AEA8]">
+            <ul className="space-y-2.5 text-xs text-[#B5ABA0]">
               <li className="flex justify-between">
                 <span>Chicken Karahi (Red)</span>
                 <span className="font-semibold text-white">PKR 1,600</span>
@@ -102,28 +102,28 @@ export const Footer: React.FC = () => {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
               Contact & Location
             </h4>
-            <div className="space-y-3 text-xs text-[#A6AEA8]">
+            <div className="space-y-3 text-xs text-[#B5ABA0]">
               <div className="flex items-start space-x-2.5">
-                <MapPin className="w-4 h-4 text-[#E87A5D] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#E8927C] flex-shrink-0 mt-0.5" />
                 <span>
                   G.T Road, near Shaikh Zaid Chowk, Muhalla Manzoorabad, <strong>Larkana</strong>, Sindh, Pakistan
                 </span>
               </div>
               <div className="flex items-center space-x-2.5">
-                <Phone className="w-4 h-4 text-[#E87A5D] flex-shrink-0" />
+                <Phone className="w-4 h-4 text-[#E8927C] flex-shrink-0" />
                 <a 
                   href={`tel:${RESTAURANT_INFO.phone}`}
-                  className="font-bold text-white hover:text-[#E87A5D] transition-colors"
+                  className="font-bold text-white hover:text-[#E8927C] transition-colors"
                 >
                   {RESTAURANT_INFO.phoneDisplay}
                 </a>
               </div>
               <div className="flex items-center space-x-2.5">
-                <Clock className="w-4 h-4 text-[#E87A5D] flex-shrink-0" />
+                <Clock className="w-4 h-4 text-[#E8927C] flex-shrink-0" />
                 <span>Daily: 12:00 PM – 2:00 AM</span>
               </div>
               <div className="pt-2">
-                <span className="inline-block bg-[#2E3632] px-2.5 py-1 rounded text-[11px] text-[#E87A5D] font-bold">
+                <span className="inline-block bg-[#332B26] px-2.5 py-1 rounded text-[11px] text-[#E8927C] font-bold border border-white/5">
                   {RESTAURANT_INFO.priceRange}
                 </span>
               </div>
@@ -133,7 +133,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar: Copyright & City Identity */}
-        <div className="pt-8 border-t border-[#2C322E] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#859089]">
+        <div className="pt-8 border-t border-[#38302A] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8C8277]">
           <p>
             © {new Date().getFullYear()} {RESTAURANT_INFO.name}. All rights reserved.
           </p>

@@ -89,16 +89,16 @@ export default function App() {
   const totalCartCount = cartItems.reduce((acc, curr) => acc + curr.quantity, 0);
 
   return (
-    <div className="min-h-screen bg-[#FBF9F5] text-[#222222] flex flex-col font-sans">
+    <div className="min-h-screen bg-[#FAF7F2] text-[#231E1B] flex flex-col font-sans">
       
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 sm:bottom-6 sm:left-auto sm:right-6 sm:translate-x-0 z-50 bg-[#1C201E] text-white px-4 py-2.5 rounded-xl shadow-xl border border-white/10 flex items-center space-x-2 text-xs font-semibold animate-bounce-subtle">
-          <Check className="w-4 h-4 text-[#22C55E]" />
+        <div className="fixed bottom-20 left-1/2 -translate-x-1/2 sm:bottom-6 sm:left-auto sm:right-6 sm:translate-x-0 z-50 bg-[#231E1B] text-white px-4.5 py-3 rounded-xl shadow-2xl border border-white/10 flex items-center space-x-2 text-xs font-semibold">
+          <Check className="w-4 h-4 text-[#10B981]" />
           <span>{toastMessage}</span>
           <button 
             onClick={() => setIsCartOpen(true)}
-            className="ml-2 text-[#E87A5D] hover:underline"
+            className="ml-2 text-[#E8927C] hover:underline cursor-pointer"
           >
             View Tray
           </button>
@@ -172,11 +172,11 @@ export default function App() {
       />
 
       {/* Mobile Sticky Quick Action Bar */}
-      <div className="sm:hidden fixed bottom-0 inset-x-0 bg-[#FBF9F5]/95 backdrop-blur-md border-t border-[#E5DFD4] p-3 z-30 flex items-center justify-between gap-3 shadow-lg">
+      <div className="sm:hidden fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-[#EAE4DA] p-3 z-30 flex items-center justify-between gap-3 shadow-lg">
         <a
           id="mobile-sticky-call-btn"
           href={`tel:${RESTAURANT_INFO.phone}`}
-          className="flex-1 flex items-center justify-center space-x-2 py-3 bg-[#C2410C] text-white rounded-xl font-bold text-xs shadow-xs"
+          className="flex-1 flex items-center justify-center space-x-2 py-3 bg-[#BF432F] text-white rounded-xl font-bold text-xs shadow-xs active:scale-98"
         >
           <Phone className="w-4 h-4" />
           <span>Call Al-Hamd ({RESTAURANT_INFO.phoneDisplay})</span>
@@ -185,12 +185,12 @@ export default function App() {
         <button
           id="mobile-sticky-cart-btn"
           onClick={() => setIsCartOpen(true)}
-          className="relative p-3 bg-white border border-[#DDD5C7] rounded-xl text-[#1C201E] flex items-center justify-center shadow-xs"
+          className="relative p-3 bg-[#FAF7F2] border border-[#EAE4DA] rounded-xl text-[#231E1B] flex items-center justify-center shadow-xs cursor-pointer"
           aria-label="Open Order Tray"
         >
-          <ShoppingBag className="w-5 h-5 text-[#C2410C]" />
+          <ShoppingBag className="w-5 h-5 text-[#BF432F]" />
           {totalCartCount > 0 && (
-            <span className="absolute -top-1.5 -right-1.5 bg-[#C2410C] text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
+            <span className="absolute -top-1.5 -right-1.5 bg-[#BF432F] text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
               {totalCartCount}
             </span>
           )}

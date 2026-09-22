@@ -1,11 +1,51 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    --color-bg-ivory: #FAF7F2;
+    --color-bg-beige: #F3EFEA;
+    --color-card-white: #FFFFFF;
+    --color-text-charcoal: #231E1B;
+    --color-text-muted: #665E55;
+    --color-border-warm: #EAE4DA;
+    --color-terracotta: #BF432F;
+    --color-terracotta-hover: #A63725;
+    --color-amber: #CA7826;
+  }
+
   body {
+    background-color: var(--color-bg-ivory);
+    color: var(--color-text-charcoal);
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
-  h1, h2, h3, .font-display {
+  h1, h2, h3, h4, .font-display {
     font-family: 'Playfair Display', Georgia, serif;
+    color: var(--color-text-charcoal);
   }
 }
+
+/* Perspective & 3D Depth Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Custom smooth scrollbar for horizontal chip bars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

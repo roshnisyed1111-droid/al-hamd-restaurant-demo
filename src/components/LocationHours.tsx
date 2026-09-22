@@ -4,8 +4,6 @@ import {
   Phone, 
   Clock, 
   Navigation, 
-  Calendar, 
-  DollarSign, 
   CheckCircle,
   ExternalLink,
   ChevronDown
@@ -19,19 +17,19 @@ export const LocationHours: React.FC = () => {
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Al-Hamd Restaurant & Bar B.Q. Larkana Sindh Pakistan G.T Road near Shaikh Zaid Chowk')}`;
 
   return (
-    <section id="location" className="py-16 sm:py-24 bg-[#FBF9F5] border-b border-[#EBE5DB]">
+    <section id="location" className="py-16 sm:py-24 bg-[#F3EFEA] border-b border-[#EAE4DA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center space-x-2 text-[#C2410C] font-semibold text-xs tracking-wider uppercase mb-2">
+          <div className="inline-flex items-center space-x-2 text-[#BF432F] font-semibold text-xs tracking-wider uppercase mb-2">
             <MapPin className="w-4 h-4" />
             <span>Visit Us in Larkana, Sindh</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold font-display text-[#1C201E] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold font-display text-[#231E1B] tracking-tight">
             Location, Contact & Operating Hours
           </h2>
-          <p className="mt-3 text-base text-[#61584D]">
+          <p className="mt-3 text-base text-[#665E55]">
             Conveniently located on G.T Road near Shaikh Zaid Chowk in Larkana. Open daily for lunch, dinner, and late-night cravings.
           </p>
         </div>
@@ -42,16 +40,16 @@ export const LocationHours: React.FC = () => {
           <div className="lg:col-span-6 flex flex-col space-y-6">
             
             {/* Primary Details Card */}
-            <div className="bg-white rounded-2xl border border-[#E5DFD4] p-6 sm:p-8 shadow-xs">
-              <div className="border-b border-[#EDE6DB] pb-6 mb-6">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#C2410C] block mb-1">
+            <div className="bg-white rounded-2xl border border-[#EAE4DA] p-6 sm:p-8 shadow-xs">
+              <div className="border-b border-[#F2ECE1] pb-6 mb-6">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#BF432F] block mb-1">
                   Restaurant Address
                 </span>
-                <h3 className="text-2xl font-bold font-display text-[#1C201E] mb-2">
+                <h3 className="text-2xl font-bold font-display text-[#231E1B] mb-2">
                   {RESTAURANT_INFO.name}
                 </h3>
                 <p className="text-base text-[#473F35] leading-relaxed flex items-start">
-                  <MapPin className="w-5 h-5 text-[#C2410C] mr-2 flex-shrink-0 mt-0.5" />
+                  <MapPin className="w-5 h-5 text-[#BF432F] mr-2 flex-shrink-0 mt-0.5" />
                   <span>
                     G.T Road, near Shaikh Zaid Chowk,<br />
                     Muhalla Manzoorabad, <strong>Larkana</strong>, Sindh, Pakistan
@@ -61,28 +59,28 @@ export const LocationHours: React.FC = () => {
 
               {/* Contact Information & Actions */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                <div className="p-4 rounded-xl bg-[#FBF9F5] border border-[#E8E1D5]">
-                  <span className="text-xs font-semibold text-[#73695C] block mb-1">
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#EAE4DA]">
+                  <span className="text-xs font-semibold text-[#786E64] block mb-1">
                     Phone / Orders
                   </span>
                   <a 
                     href={`tel:${RESTAURANT_INFO.phone}`}
-                    className="text-base font-bold text-[#C2410C] hover:underline flex items-center"
+                    className="text-base font-bold text-[#BF432F] hover:underline flex items-center"
                   >
                     <Phone className="w-4 h-4 mr-1.5" />
                     {RESTAURANT_INFO.phoneDisplay}
                   </a>
-                  <span className="text-[11px] text-[#73695C] block mt-1">Direct call for orders & takeaway</span>
+                  <span className="text-[11px] text-[#786E64] block mt-1">Direct call for orders & takeaway</span>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#FBF9F5] border border-[#E8E1D5]">
-                  <span className="text-xs font-semibold text-[#73695C] block mb-1">
+                <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#EAE4DA]">
+                  <span className="text-xs font-semibold text-[#786E64] block mb-1">
                     City & Region
                   </span>
-                  <p className="text-base font-bold text-[#1C201E]">
+                  <p className="text-base font-bold text-[#231E1B]">
                     Larkana, Sindh
                   </p>
-                  <span className="text-[11px] text-[#73695C] block mt-1">Pakistan</span>
+                  <span className="text-[11px] text-[#786E64] block mt-1">Pakistan</span>
                 </div>
               </div>
 
@@ -96,7 +94,7 @@ export const LocationHours: React.FC = () => {
                     {RESTAURANT_INFO.priceRange}
                   </p>
                 </div>
-                <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-[#10B981] text-white text-xs font-bold shadow-xs">
+                <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-[#10B981] text-white text-xs font-bold shadow-2xs">
                   <CheckCircle className="w-3.5 h-3.5" />
                   <span>{RESTAURANT_INFO.budgetBadge}</span>
                 </div>
@@ -109,16 +107,16 @@ export const LocationHours: React.FC = () => {
                   href={googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center space-x-2 bg-[#1C201E] hover:bg-[#333A36] text-white py-3.5 px-6 rounded-xl font-semibold text-sm shadow-sm transition-all"
+                  className="flex-1 inline-flex items-center justify-center space-x-2 bg-[#231E1B] hover:bg-[#3D352F] text-white py-3.5 px-6 rounded-xl font-semibold text-sm shadow-xs transition-all cursor-pointer"
                 >
-                  <Navigation className="w-4 h-4 text-[#F59E0B]" />
+                  <Navigation className="w-4 h-4 text-[#CA7826]" />
                   <span>Get Directions</span>
                 </a>
 
                 <a
                   id="location-call-now-btn"
                   href={`tel:${RESTAURANT_INFO.phone}`}
-                  className="flex-1 inline-flex items-center justify-center space-x-2 bg-[#C2410C] hover:bg-[#A33406] text-white py-3.5 px-6 rounded-xl font-semibold text-sm shadow-sm transition-all"
+                  className="flex-1 inline-flex items-center justify-center space-x-2 bg-[#BF432F] hover:bg-[#A63725] text-white py-3.5 px-6 rounded-xl font-semibold text-sm shadow-xs transition-all cursor-pointer"
                 >
                   <Phone className="w-4 h-4" />
                   <span>Call {RESTAURANT_INFO.phoneDisplay}</span>
@@ -127,12 +125,12 @@ export const LocationHours: React.FC = () => {
             </div>
 
             {/* Weekly Operating Hours Component */}
-            <div className="bg-white rounded-2xl border border-[#E5DFD4] p-6 shadow-xs">
+            <div className="bg-white rounded-2xl border border-[#EAE4DA] p-6 shadow-xs">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-2.5">
-                  <Clock className="w-5 h-5 text-[#C2410C]" />
+                  <Clock className="w-5 h-5 text-[#BF432F]" />
                   <div>
-                    <h4 className="text-base font-bold text-[#1C201E]">
+                    <h4 className="text-base font-bold text-[#231E1B]">
                       Operating Schedule
                     </h4>
                     <p className="text-xs text-[#16A34A] font-semibold flex items-center mt-0.5">
@@ -144,7 +142,7 @@ export const LocationHours: React.FC = () => {
 
                 <button
                   onClick={() => setHoursExpanded(!hoursExpanded)}
-                  className="text-xs font-semibold text-[#73695C] hover:text-[#1C201E] flex items-center space-x-1 py-1 px-2.5 rounded-lg bg-[#F5EFEB]"
+                  className="text-xs font-semibold text-[#786E64] hover:text-[#231E1B] flex items-center space-x-1 py-1.5 px-3 rounded-lg bg-[#FAF7F2] border border-[#EAE4DA] cursor-pointer"
                 >
                   <span>{hoursExpanded ? 'Hide Days' : 'View All Days'}</span>
                   <ChevronDown className={`w-3.5 h-3.5 transition-transform ${hoursExpanded ? 'rotate-180' : ''}`} />
@@ -152,7 +150,7 @@ export const LocationHours: React.FC = () => {
               </div>
 
               {/* Weekly schedule list */}
-              <div className="space-y-2 pt-2 border-t border-[#EDE6DB]">
+              <div className="space-y-2 pt-2 border-t border-[#F2ECE1]">
                 {WEEKLY_HOURS.map((slot) => {
                   const isCurrentDay = slot.day === selectedDay || slot.isToday;
                   if (!hoursExpanded && !isCurrentDay) return null;
@@ -164,13 +162,13 @@ export const LocationHours: React.FC = () => {
                       className={`flex items-center justify-between py-2 px-3 rounded-lg text-xs transition-colors cursor-pointer ${
                         isCurrentDay
                           ? 'bg-[#FEF3C7] text-[#92400E] font-bold border border-[#FDE68A]'
-                          : 'text-[#4F463B] hover:bg-[#FBF9F5]'
+                          : 'text-[#4F463B] hover:bg-[#FAF7F2]'
                       }`}
                     >
                       <div className="flex items-center space-x-2">
                         <span>{slot.day}</span>
                         {slot.isToday && (
-                          <span className="text-[10px] bg-[#D97706] text-white px-1.5 py-0.2 rounded font-bold uppercase">
+                          <span className="text-[10px] bg-[#CA7826] text-white px-1.5 py-0.2 rounded font-bold uppercase">
                             Today
                           </span>
                         )}
@@ -186,10 +184,10 @@ export const LocationHours: React.FC = () => {
 
           {/* Right Column: Clean Larkana Map Placeholder & Landmark Visualizer */}
           <div className="lg:col-span-6">
-            <div className="bg-white rounded-2xl border border-[#E5DFD4] overflow-hidden shadow-xs">
+            <div className="bg-white rounded-2xl border border-[#EAE4DA] overflow-hidden shadow-xs">
               
               {/* Map Canvas Card */}
-              <div className="relative aspect-4/3 sm:aspect-16/11 w-full bg-[#EAE6DE] overflow-hidden flex flex-col justify-between p-6">
+              <div className="relative aspect-4/3 sm:aspect-16/11 w-full bg-[#EDE8E0] overflow-hidden flex flex-col justify-between p-6">
                 
                 {/* Visual Map Grid Pattern */}
                 <div 
@@ -220,15 +218,15 @@ export const LocationHours: React.FC = () => {
                 {/* Top Badge on Map */}
                 <div className="relative z-10 flex justify-between items-start">
                   <div className="bg-white/95 backdrop-blur-xs px-3.5 py-2 rounded-xl border border-[#D8CEBF] shadow-xs">
-                    <p className="text-xs font-bold text-[#1C201E]">G.T Road • Larkana City</p>
-                    <p className="text-[11px] text-[#73695C]">Muhalla Manzoorabad, Sindh</p>
+                    <p className="text-xs font-bold text-[#231E1B]">G.T Road • Larkana City</p>
+                    <p className="text-[11px] text-[#786E64]">Muhalla Manzoorabad, Sindh</p>
                   </div>
 
                   <a
                     href={googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#1C201E] hover:bg-[#C2410C] text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-sm transition-colors flex items-center space-x-1"
+                    className="bg-[#231E1B] hover:bg-[#BF432F] text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-sm transition-colors flex items-center space-x-1 cursor-pointer"
                   >
                     <span>Open in Maps</span>
                     <ExternalLink className="w-3 h-3" />
@@ -236,11 +234,11 @@ export const LocationHours: React.FC = () => {
                 </div>
 
                 {/* Central Restaurant Pin on Map */}
-                <div className="relative z-10 self-center transform -translate-y-2 flex flex-col items-center animate-bounce-subtle">
-                  <div className="bg-[#C2410C] text-white p-3 rounded-full shadow-lg border-2 border-white flex items-center justify-center">
+                <div className="relative z-10 self-center transform -translate-y-2 flex flex-col items-center">
+                  <div className="bg-[#BF432F] text-white p-3 rounded-full shadow-lg border-2 border-white flex items-center justify-center">
                     <MapPin className="w-6 h-6 fill-current" />
                   </div>
-                  <div className="mt-2 bg-[#1C201E] text-white px-3 py-1 rounded-md text-xs font-bold shadow-md whitespace-nowrap">
+                  <div className="mt-2 bg-[#231E1B] text-white px-3 py-1 rounded-md text-xs font-bold shadow-md whitespace-nowrap">
                     AL-HAMD RESTAURANT & BAR B.Q.
                   </div>
                   <div className="text-[10px] text-[#544B3E] font-bold bg-white/90 px-2 py-0.5 rounded shadow-xs mt-1">
@@ -251,7 +249,7 @@ export const LocationHours: React.FC = () => {
                 {/* Bottom Landmark Info Bar */}
                 <div className="relative z-10 bg-white/95 backdrop-blur-xs p-3 rounded-xl border border-[#D8CEBF] shadow-xs flex items-center justify-between text-xs text-[#4F463B]">
                   <div className="flex items-center space-x-2">
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#C2410C]" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#BF432F]" />
                     <span className="font-semibold">Near Shaikh Zaid Chowk, Larkana</span>
                   </div>
                   <span className="text-[#8C8275] text-[11px]">Dine-in • Takeout</span>
@@ -260,16 +258,16 @@ export const LocationHours: React.FC = () => {
               </div>
 
               {/* Directions Assist Box */}
-              <div className="p-6 bg-[#F7F4EE] border-t border-[#E8E1D5]">
-                <h4 className="text-sm font-bold text-[#1C201E] mb-2 flex items-center">
-                  <Navigation className="w-4 h-4 text-[#C2410C] mr-1.5" />
+              <div className="p-6 bg-[#FAF7F2] border-t border-[#EAE4DA]">
+                <h4 className="text-sm font-bold text-[#231E1B] mb-2 flex items-center">
+                  <Navigation className="w-4 h-4 text-[#BF432F] mr-1.5" />
                   How to reach Al-Hamd Restaurant
                 </h4>
-                <p className="text-xs text-[#5D554B] leading-relaxed">
+                <p className="text-xs text-[#665E55] leading-relaxed">
                   Located directly on G.T Road in Muhalla Manzoorabad, just a short walk from Shaikh Zaid Chowk in central Larkana, Sindh. Ample street parking available for cars and motorcycles.
                 </p>
                 
-                <div className="mt-4 pt-4 border-t border-[#E8E1D5] flex items-center justify-between text-xs font-medium text-[#73695C]">
+                <div className="mt-4 pt-4 border-t border-[#EAE4DA] flex items-center justify-between text-xs font-medium text-[#786E64]">
                   <span>City: <strong>Larkana</strong></span>
                   <span>Province: <strong>Sindh</strong></span>
                   <span>Country: <strong>Pakistan</strong></span>

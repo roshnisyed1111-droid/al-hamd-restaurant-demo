@@ -44,19 +44,19 @@ export const Specialties: React.FC<SpecialtiesProps> = ({ onSelectCategory }) =>
   ];
 
   return (
-    <section id="specialties" className="py-16 sm:py-20 bg-white border-b border-[#EBE5DB]">
+    <section id="specialties" className="py-16 sm:py-22 bg-[#FAF7F2] border-b border-[#EAE4DA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center space-x-2 text-[#C2410C] font-semibold text-xs tracking-wider uppercase mb-2">
+          <div className="inline-flex items-center space-x-2 text-[#BF432F] font-semibold text-xs tracking-wider uppercase mb-2">
             <Flame className="w-4 h-4" />
-            <span>Al-Hamd Signature Offerings</span>
+            <span>Signature Specialties</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold font-display text-[#1C201E] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold font-display text-[#231E1B] tracking-tight">
             Karahi • BBQ • Traditional Pakistani Cuisine
           </h2>
-          <p className="mt-3 text-base text-[#61584D] leading-relaxed">
+          <p className="mt-3 text-base text-[#665E55] leading-relaxed">
             Prepared fresh to order following traditional Pakistani culinary recipes with premium local ingredients in Larkana.
           </p>
         </div>
@@ -66,10 +66,10 @@ export const Specialties: React.FC<SpecialtiesProps> = ({ onSelectCategory }) =>
           {specialties.map((spec) => (
             <div
               key={spec.id}
-              className="group bg-[#FBF9F5] rounded-2xl overflow-hidden border border-[#E8E1D5] hover:border-[#C2410C]/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+              className="group bg-white rounded-2xl overflow-hidden border border-[#EAE4DA] hover:border-[#BF432F]/50 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
             >
               {/* Image Container */}
-              <div className="relative h-60 overflow-hidden bg-[#242A27]">
+              <div className="relative h-64 overflow-hidden bg-[#231E1B]">
                 <img
                   src={spec.image}
                   alt={spec.title}
@@ -78,41 +78,41 @@ export const Specialties: React.FC<SpecialtiesProps> = ({ onSelectCategory }) =>
                 />
                 
                 {/* Badges */}
-                <div className="absolute top-3 left-3 bg-[#1C201E]/80 backdrop-blur-xs text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/20">
+                <div className="absolute top-3.5 left-3.5 bg-[#231E1B]/85 backdrop-blur-xs text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/15">
                   {spec.badge}
                 </div>
-                <div className="absolute bottom-3 right-3 bg-white/95 text-[#1C201E] text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                <div className="absolute bottom-3.5 right-3.5 bg-white text-[#231E1B] text-xs font-bold px-3 py-1 rounded-full shadow-md border border-[#EAE4DA]">
                   {spec.price}
                 </div>
               </div>
 
               {/* Card Body */}
-              <div className="p-6 flex-1 flex flex-col justify-between">
+              <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-xs font-semibold text-[#C2410C] tracking-wide uppercase">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs font-bold text-[#BF432F] tracking-wider uppercase">
                       {spec.tagline}
                     </span>
-                    <span className="text-xs font-bold text-[#8C8275]">
+                    <span className="text-xs font-bold text-[#8C8276]">
                       {spec.urdu}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold font-display text-[#1C201E] mb-2.5">
+                  <h3 className="text-xl font-bold font-display text-[#231E1B] mb-2.5 group-hover:text-[#BF432F] transition-colors">
                     {spec.title}
                   </h3>
-                  <p className="text-sm text-[#544D44] leading-relaxed">
+                  <p className="text-sm text-[#665E55] leading-relaxed">
                     {spec.description}
                   </p>
                 </div>
 
                 {/* Footer Action */}
-                <div className="pt-5 mt-5 border-t border-[#EDE7DD]">
+                <div className="pt-5 mt-6 border-t border-[#F2ECE1]">
                   <button
                     onClick={() => onSelectCategory(spec.category)}
-                    className="w-full inline-flex items-center justify-center space-x-2 text-sm font-semibold text-[#1C201E] hover:text-[#C2410C] group-hover:translate-x-1 transition-all py-1"
+                    className="w-full inline-flex items-center justify-center space-x-2 text-sm font-semibold text-[#231E1B] hover:text-[#BF432F] transition-all py-1.5 group-hover:translate-x-1 cursor-pointer"
                   >
                     <span>View in Menu</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4 text-[#BF432F]" />
                   </button>
                 </div>
               </div>
