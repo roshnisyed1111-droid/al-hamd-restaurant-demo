@@ -86,7 +86,7 @@ export const Menu: React.FC<MenuProps> = ({
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs font-semibold text-[#8C8276] hover:text-[#231E1B] bg-[#F2ECE1] px-2.5 py-1 rounded-md transition-colors"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs font-semibold text-[#8C8276] hover:text-[#231E1B] bg-[#F2ECE1] px-2.5 py-1 rounded-md transition-colors cursor-pointer"
               >
                 Clear
               </button>
@@ -126,7 +126,7 @@ export const Menu: React.FC<MenuProps> = ({
                 setSearchQuery('');
                 onCategoryChange('All');
               }}
-              className="mt-4 px-4 py-2 bg-[#BF432F] text-white rounded-lg text-xs font-semibold hover:bg-[#A63725] transition-colors"
+              className="mt-4 px-4 py-2 bg-[#BF432F] text-white rounded-lg text-xs font-semibold hover:bg-[#A63725] transition-colors cursor-pointer"
             >
               Reset Filters
             </button>
@@ -139,10 +139,7 @@ export const Menu: React.FC<MenuProps> = ({
               return (
                 <div
                   key={dish.id}
-                  className="group bg-white rounded-2xl border border-[#EAE4DA] hover:border-[#BF432F]/50 p-5 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
-                  style={{
-                    transformStyle: 'preserve-3d',
-                  }}
+                  className="group bg-white rounded-2xl border border-[#EAE4DA] hover:border-[#BF432F]/40 p-5 shadow-xs hover:shadow-[0_20px_35px_-10px_rgba(35,30,27,0.12)] hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between preserve-3d"
                 >
                   <div>
                     {/* Top Row: Category tag, urdu name & badges */}
@@ -157,9 +154,14 @@ export const Menu: React.FC<MenuProps> = ({
                       )}
                     </div>
 
-                    {/* Image with subtle 3D hover scale */}
+                    {/* Image with subtle 3D tactile forward movement */}
                     {dish.image && (
-                      <div className="relative h-48 rounded-xl overflow-hidden mb-4 bg-[#231E1B]/5 border border-[#EAE4DA]/70">
+                      <div 
+                        className="relative h-48 rounded-xl overflow-hidden mb-4 bg-[#231E1B]/5 border border-[#EAE4DA]/70 shadow-xs transition-all duration-500 ease-out group-hover:shadow-md"
+                        style={{
+                          transform: 'translateZ(10px)',
+                        }}
+                      >
                         <img
                           src={dish.image}
                           alt={dish.name}

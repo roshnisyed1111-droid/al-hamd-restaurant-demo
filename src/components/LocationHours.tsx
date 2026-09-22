@@ -17,7 +17,7 @@ export const LocationHours: React.FC = () => {
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Al-Hamd Restaurant & Bar B.Q. Larkana Sindh Pakistan G.T Road near Shaikh Zaid Chowk')}`;
 
   return (
-    <section id="location" className="py-16 sm:py-24 bg-[#F3EFEA] border-b border-[#EAE4DA]">
+    <section id="location" className="py-16 sm:py-24 bg-[#FAF7F2] border-b border-[#EAE4DA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -100,26 +100,26 @@ export const LocationHours: React.FC = () => {
                 </div>
               </div>
 
-              {/* Action Buttons */}
+              {/* Action Buttons: Terracotta CTA */}
               <div className="flex flex-wrap gap-4">
+                <a
+                  id="location-call-now-btn"
+                  href={`tel:${RESTAURANT_INFO.phone}`}
+                  className="flex-1 inline-flex items-center justify-center space-x-2 bg-[#BF432F] hover:bg-[#A63725] text-white py-3.5 px-6 rounded-xl font-bold text-sm shadow-xs transition-all cursor-pointer active:scale-98"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>Call {RESTAURANT_INFO.phoneDisplay}</span>
+                </a>
+
                 <a
                   id="location-get-directions-btn"
                   href={googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center space-x-2 bg-[#231E1B] hover:bg-[#3D352F] text-white py-3.5 px-6 rounded-xl font-semibold text-sm shadow-xs transition-all cursor-pointer"
+                  className="flex-1 inline-flex items-center justify-center space-x-2 bg-white hover:bg-[#FAF7F2] text-[#231E1B] border border-[#DDD6CB] hover:border-[#BF432F] py-3.5 px-6 rounded-xl font-bold text-sm shadow-2xs transition-all cursor-pointer active:scale-98"
                 >
-                  <Navigation className="w-4 h-4 text-[#CA7826]" />
+                  <Navigation className="w-4 h-4 text-[#BF432F]" />
                   <span>Get Directions</span>
-                </a>
-
-                <a
-                  id="location-call-now-btn"
-                  href={`tel:${RESTAURANT_INFO.phone}`}
-                  className="flex-1 inline-flex items-center justify-center space-x-2 bg-[#BF432F] hover:bg-[#A63725] text-white py-3.5 px-6 rounded-xl font-semibold text-sm shadow-xs transition-all cursor-pointer"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>Call {RESTAURANT_INFO.phoneDisplay}</span>
                 </a>
               </div>
             </div>

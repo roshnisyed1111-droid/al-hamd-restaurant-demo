@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Phone, ShoppingBag, Menu as MenuIcon, X, MapPin, Clock, Utensils } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Phone, ShoppingBag, Menu as MenuIcon, X, MapPin, Clock } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/restaurantData';
 
 interface HeaderProps {
@@ -9,6 +9,15 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 40);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { name: 'Home', href: '#home' },
@@ -51,22 +60,26 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart }) => {
         </div>
       </div>
 
-      {/* Main Polished Ivory Header */}
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#EAE4DA] shadow-[0_2px_10px_-4px_rgba(35,30,27,0.06)]">
+      {/* Main Polished Ivory Header with Dynamic Scroll Transition */}
+      <header className={`sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#EAE4DA] transition-all duration-300 ${
+        isScrolled 
+          ? 'py-2 shadow-[0_4px_20px_-4px_rgba(35,30,27,0.08)]' 
+          : 'py-4 shadow-[0_2px_10px_-4px_rgba(35,30,27,0.04)]'
+      }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between">
             
             {/* Restaurant Name & Logo */}
             <a href="#home" className="flex items-center space-x-3 group">
-              <div className="w-11 h-11 rounded-xl bg-[#231E1B] text-white flex flex-col items-center justify-center shadow-sm group-hover:bg-[#BF432F] transition-colors border border-[#3E3630]">
-                <span className="text-[11px] font-bold tracking-widest text-[#E8927C] group-hover:text-white uppercase">الحمد</span>
-                <span className="text-[9px] font-semibold text-[#D8D0C5] leading-none">AL-HAMD</span>
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#231E1B] text-white flex flex-col items-center justify-center shadow-xs group-hover:bg-[#BF432F] transition-colors border border-[#3E3630]">
+                <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-[#E8927C] group-hover:text-white uppercase">الحمد</span>
+                <span className="text-[8px] sm:text-[9px] font-semibold text-[#D8D0C5] leading-none">AL-HAMD</span>
               </div>
               <div>
-                <span className="text-lg sm:text-xl font-bold font-display text-[#231E1B] tracking-tight block leading-tight">
+                <span className="text-base sm:text-xl font-bold font-display text-[#231E1B] tracking-tight block leading-tight">
                   AL-HAMD RESTAURANT
                 </span>
-                <span className="text-[11px] sm:text-xs font-semibold text-[#736659] tracking-wider uppercase block">
+                <span className="text-[10px] sm:text-xs font-semibold text-[#786E64] tracking-wider uppercase block">
                   & Bar B.Q. • Larkana
                 </span>
               </div>
@@ -91,7 +104,7 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart }) => {
               <button
                 id="cart-trigger-button"
                 onClick={onOpenCart}
-                className="relative p-2.5 rounded-xl border border-[#EAE4DA] bg-[#FAF7F2] text-[#231E1B] hover:border-[#BF432F] hover:text-[#BF432F] transition-all shadow-xs flex items-center cursor-pointer"
+                className="relative p-2.5 rounded-xl border border-[#EAE4DA] bg-[#FAF7F2] text-[#231E1B] hover:border-[#BF432F] hover:text-[#BF432F] transition-all shadow-2xs flex items-center cursor-pointer"
                 aria-label="View Order Tray"
               >
                 <ShoppingBag className="w-5 h-5" />
@@ -106,7 +119,7 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart }) => {
               <a
                 id="header-call-button"
                 href={`tel:${RESTAURANT_INFO.phone}`}
-                className="hidden sm:inline-flex items-center space-x-2 bg-[#BF432F] hover:bg-[#A63725] text-white px-4.5 py-2.5 rounded-xl text-sm font-semibold shadow-xs hover:shadow-sm transition-all transform active:scale-95"
+                className="hidden sm:inline-flex items-center space-x-2 bg-[#BF432F] hover:bg-[#A63725] text-white px-4.5 py-2.5 rounded-xl text-sm font-bold shadow-2xs hover:shadow-xs transition-all transform active:scale-95"
               >
                 <Phone className="w-4 h-4" />
                 <span>Call / Order Now</span>
@@ -142,7 +155,7 @@ export const Header: React.FC<HeaderProps> = ({ cartCount, onOpenCart }) => {
               <div className="pt-4 border-t border-[#EAE4DA] flex flex-col space-y-3">
                 <a
                   href={`tel:${RESTAURANT_INFO.phone}`}
-                  className="w-full flex items-center justify-center space-x-2 bg-[#BF432F] text-white py-3 rounded-xl font-semibold shadow-sm"
+                  className="w-full flex items-center justify-center space-x-2 bg-[#BF432F] text-white py-3 rounded-xl font-bold shadow-xs"
                 >
                   <Phone className="w-4 h-4" />
                   <span>Call to Order: {RESTAURANT_INFO.phoneDisplay}</span>

@@ -4,7 +4,7 @@ import { CUSTOMER_REVIEWS } from '../data/restaurantData';
 
 export const Reviews: React.FC = () => {
   return (
-    <section id="reviews" className="py-16 sm:py-24 bg-white border-b border-[#EAE4DA]">
+    <section id="reviews" className="py-16 sm:py-24 bg-[#F3EFEA] border-b border-[#EAE4DA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -22,7 +22,7 @@ export const Reviews: React.FC = () => {
         </div>
 
         {/* Overall Google Rating Snapshot Banner */}
-        <div className="max-w-4xl mx-auto mb-12 bg-[#FAF7F2] border border-[#EAE4DA] rounded-2xl p-6 sm:p-8 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="max-w-4xl mx-auto mb-12 bg-white border border-[#EAE4DA] rounded-2xl p-6 sm:p-8 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center space-x-4 text-center sm:text-left">
             <div className="w-16 h-16 rounded-2xl bg-[#231E1B] text-white flex flex-col items-center justify-center shadow-xs">
               <span className="text-2xl font-black text-[#E8927C] leading-none">4.2</span>
@@ -48,11 +48,11 @@ export const Reviews: React.FC = () => {
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
-            <div className="flex items-center space-x-2 px-3.5 py-2 bg-white rounded-xl border border-[#EAE4DA] text-xs font-semibold text-[#231E1B] shadow-2xs">
+            <div className="flex items-center space-x-2 px-3.5 py-2 bg-[#FAF7F2] rounded-xl border border-[#EAE4DA] text-xs font-semibold text-[#231E1B] shadow-2xs">
               <CheckCircle className="w-4 h-4 text-[#16A34A]" />
               <span>Budget-Friendly Taste</span>
             </div>
-            <div className="flex items-center space-x-2 px-3.5 py-2 bg-white rounded-xl border border-[#EAE4DA] text-xs font-semibold text-[#231E1B] shadow-2xs">
+            <div className="flex items-center space-x-2 px-3.5 py-2 bg-[#FAF7F2] rounded-xl border border-[#EAE4DA] text-xs font-semibold text-[#231E1B] shadow-2xs">
               <CheckCircle className="w-4 h-4 text-[#16A34A]" />
               <span>Quality Food & Service</span>
             </div>
@@ -64,7 +64,7 @@ export const Reviews: React.FC = () => {
           {CUSTOMER_REVIEWS.map((rev) => (
             <div
               key={rev.id}
-              className="bg-white rounded-2xl border border-[#EAE4DA] p-6 sm:p-7 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+              className="bg-white rounded-2xl border border-[#EAE4DA] p-6 sm:p-7 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Terracotta Star Rating */}
