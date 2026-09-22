@@ -1,0 +1,6 @@
+{
+  "name": "Al-Hamd Restaurant & Bar B.Q.",
+  "description": "Authentic Pakistani cuisine, BBQ, chicken karahi, and shahi daal in Larkana, Sindh, Pakistan. Dine-in, takeout, and late-night dining.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
